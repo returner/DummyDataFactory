@@ -9,5 +9,6 @@ namespace ServiceInfrastructure.Models
         public IAwsSetting AWS { get; init; } = null!;
         public IEnumerable<string> CorsOrigins { get; init; } = null!;
         public ISwaggerSetting Swagger { get; init; } = null!;
+        public string Database { get; init; } = null!;
     }
 }

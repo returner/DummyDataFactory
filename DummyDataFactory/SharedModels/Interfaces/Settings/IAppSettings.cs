@@ -6,8 +6,8 @@ namespace SharedModel.Interfaces.Configuration
     {
         string Environment { get; init; }
         ISwaggerSetting Swagger { get; init; }
-        ISwaggerSetting AdminSwagger { get; init; }
         IEnumerable<string> CorsOrigins { get; init; }
         IAwsSetting AWS { get; init; }
+        string Database { get; init; }
     }
 }
