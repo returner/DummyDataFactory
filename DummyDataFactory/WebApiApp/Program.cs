@@ -41,13 +41,14 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = appSettings.AdminSwagger.Title,
-        Version = appSettings.AdminSwagger.Version,
-        Description = appSettings.AdminSwagger.Description,
+        Title = appSettings.Swagger.Title,
+        Version = appSettings.Swagger.Version,
+        Description = appSettings.Swagger.Description,
         Contact = new OpenApiContact
         {
-            Email = string.Empty,
-            Url = new Uri(appSettings.AdminSwagger.Link),
+            Name = "returner",
+            Email = "typescripter@gmail.com",
+            Url = new Uri(appSettings.Swagger.Link),
         }
     });
     c.EnableAnnotations();
@@ -98,7 +99,7 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "DummyDataFactory document");
-    c.RoutePrefix = string.Empty; //if swagger show webroot
+    //c.RoutePrefix = string.Empty; //if swagger show webroot
 });
 
 
