@@ -1,8 +1,10 @@
+using Entities.Extension;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Repositories.Extensions;
 using System.IO.Compression;
 using System.Reflection;
 using WebApiApp.Middlewares;
@@ -89,6 +91,13 @@ builder.Services
                 };
             });
 
+// DI register repositories
+builder.Services.AddDummyFactoryDbContext();
+builder.Services.AddCartRepository();
+builder.Services.AddProductCategoryRepository();
+builder.Services.AddProductRepository();
+builder.Services.AddUserAppRepository();
+builder.Services.AddUserRepository();
 
 var app = builder.Build();
 

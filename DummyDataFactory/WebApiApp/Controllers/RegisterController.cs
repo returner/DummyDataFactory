@@ -25,7 +25,8 @@ namespace WebApiApp.Controllers
         [SwaggerResponse((int)HttpStatusCode.OK, HttpStatusCodeDescription.Ok, typeof(RegisterUserResponse))]
         public async Task<IActionResult> RegisterService([FromBody] RegisterUserRequest registerUserRequest)
         {
-
+            await Task.CompletedTask;
+            return Ok();
         }
     }
 }

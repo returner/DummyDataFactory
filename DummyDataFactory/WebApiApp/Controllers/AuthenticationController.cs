@@ -29,7 +29,8 @@ namespace WebApiApp.Controllers
         [SwaggerResponse((int)HttpStatusCode.OK, HttpStatusCodeDescription.Ok, typeof(SuccessResponse))]
         public async Task<IActionResult> SignInAsync()
         {
-
+            await Task.CompletedTask;
+            return Ok();
         }
 
         /// <summary>
@@ -40,7 +41,8 @@ namespace WebApiApp.Controllers
         [SwaggerResponse((int)HttpStatusCode.OK, HttpStatusCodeDescription.Ok, typeof(SuccessResponse))]
         public async Task<IActionResult> SignUpAsync()
         {
-
+            await Task.CompletedTask;
+            return Ok();
         }
 
         /// <summary>
@@ -52,9 +54,8 @@ namespace WebApiApp.Controllers
         [SwaggerResponse((int)HttpStatusCode.OK, HttpStatusCodeDescription.Ok, typeof(SuccessResponse))]
         public async Task<IActionResult> SignOutAsync()
         {
-
+            await Task.CompletedTask;
+            return Ok();
         }
-
-        public async Task<IActionResult> Remove
     }
 }
