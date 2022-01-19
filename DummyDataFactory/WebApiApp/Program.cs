@@ -99,6 +99,9 @@ builder.Services.AddProductRepository();
 builder.Services.AddUserAppRepository();
 builder.Services.AddUserRepository();
 
+builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
